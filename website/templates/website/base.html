@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hemlab Consultancy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Start Include All CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/themewar-font.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/quera-icon.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightcase.css' %}">
+
+
+    <!-- Revolution Slider Setting CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/settings.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/preset.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/ignore_for_wp.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <!-- End Include All CSS -->
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <!-- Favicon Icon -->
+</head>
+<body>
+        <!-- Preloading -->
+        <!-- <div class="preloader clock text-center">
+            <div class="queraLoader">
+                <div class="loaderO">
+                    <span>Q</span>
+                    <span>U</span>
+                    <span>E</span>
+                    <span>R</span>
+                    <span>A</span>
+                </div>
+            </div>
+        </div>
+        <!-- Preloading -->
+        
+       <!-- Topbar Start -->
+       <section class="topbar02">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 d-flex">
+                    <p><i class="twi-clock2"></i>Mon - Sat: 8:00 am - 7:00 pm</p>
+                    <a class="lang" href="javascript:void(0);"><i class="twi-globe2"></i>English</a>
+                </div>
+                <div class="col-md-6 d-flex align-right justify-content-end">
+                    <p><a target="_blank" href="https://www.google.com/maps/@23.608602,90.350998,7z"><i class="twi-location-arrow"></i>Get Directions</a></p>
+                    <div class="tpSocail">
+                        <span>Follow Us On:</span>
+                        <a href="javascript:void(0);"><i class="twi-facebook-f"></i></a>
+                        <a href="javascript:void(0);"><i class="twi-twitter"></i></a>
+                        <a href="javascript:void(0);"><i class="twi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Topbar End -->
+
+    <!-- Header Start -->
+    <header class="header02 isSticky">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="navbar01">
+                        <div class="navleft">
+                            <div class="logo">
+                            <a href="{% url 'home' %}"><img src="{% static 'images/hemlab_logo.png' %}" alt="Digital"></a>
+                            </div>
+                            <div class="icon_box_04">
+                                <div class="ib_box"><i class="twi-comments-alt-dollar"></i></div>
+                                <p>Have any Questions?</p>
+                                <h3>info@hemlab.com</h3>
+                            </div>
+                            <div class="searchBtn">
+                                <a href="javascript:void(0);"><i class="twi-search2"></i></a>
+                                <div class="header01SearchBar">
+                                    <form class="d-flex" method="post" action="#">
+                                        <input type="search" name="s" placeholder="Search Here...">
+                                        <button type="submit"><i class="twi-search2"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="mainMenu">
+                            <ul>
+                                <li class="current-menu-item">
+                                    <a href="{% url 'home' %}">Home</a>  
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{% url 'about' %}">About</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{% url 'blog' %}">Blogs</a>
+                                </li>     
+                                <li class="menu-item">
+                                    <a href="{% url 'services' %}">Services</a>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="accessNav">
+                            <a href="javascript:void(0);" class="menuToggler"><i class="twi-bars1"></i></a>
+                            <a href="contact.html" class="qu_btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+        <!-- Begin:: Popup Menu -->
+        <section class="sidebarMenu">
+            <div class="sidebarMenuOverlay"></div>
+            <div class="SMArea">
+                <div class="SMAHeader">
+                    <h3>
+                        <i class="twi-bars1"></i> Menu
+                    </h3>
+                    <a href="javascript:void(0);" class="SMACloser"><i class="twi-times2"></i></a>
+                </div>
+                <div class="SMABody">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menu-item current-menu-item">
+                            <a href="about1.html">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="blog2.html">Blogs</a>
+                        </li>     
+                        <li class="menu-item">
+                            <a href="service1.html">Services</a>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Popup Menu -->
+   
+
+
+{% block content %}
+{% endblock %}
+
+{% include 'website/shared/footer.html' %}

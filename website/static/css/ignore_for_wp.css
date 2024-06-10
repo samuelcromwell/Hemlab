@@ -1,0 +1,783 @@
+/*
+ Theme Name: Quera
+ Theme URI: https://themeforest.net/user/themewar/portfolio
+ Author: themewar
+ Author URI: 
+ Description: Quera - Business & Finance Consultancy Responsive HTML5 Template
+ Version: 1.0
+ License:
+ License URI:
+*/
+
+.clientLogo01{
+	position: relative;
+	background: var(--theme-color);
+	padding: 75px 0 73px;
+}
+.clientLogo01 .secTitle{
+	font-size: 30px;
+	line-height: 40px;
+	color: #fff;
+	font-weight: 600;
+	margin: 0;
+}
+.clientLogo01 .qu_btn{
+	margin: 12px 0 0;
+	padding: 0 15px;
+	width: 100%;
+	background: #fff;
+	color: var(--theme-color);
+}
+.clientLogo01 .qu_btn:before{
+	background: #1a1a1a;
+}
+.clientLogo01 .qu_btn:hover{
+	color: #fff;
+}
+.serviceSection01{
+	position: relative;
+	padding: 120px 0;
+	background: url(../images/bg/2.png) no-repeat top center;
+}
+.boxService{
+	position: relative;
+	background: url(../images/bg/3.png) no-repeat center center / cover #f6f6f6;
+	padding: 72px 75px;
+	margin: 0 0 30px;
+}
+.boxService .secTitle{
+	font-size: 45px;
+	line-height: 60px;
+	margin: 0 0 30px;
+}
+.boxService p{
+	line-height: 28px;
+	margin: 0;
+}
+.serviceSection01 .qu_link{
+	margin-top: 35px;
+}
+.aboutSection01{
+	position: relative;
+	background: url(../images/bg/2.jpg) no-repeat center center / cover;
+	padding: 139px 0 105px;
+}
+.aboutSection01 .secTitle{
+	font-size: 55px;
+	margin-bottom: 25px;
+}
+.aboutSection01 .secDesc{
+	padding-right: 100px;
+	margin-bottom: 40px;
+}
+.processSection01{
+	background: url(../images/bg/5.png) no-repeat center center / cover;
+	position: relative;
+	padding: 120px 0 245px;
+}
+.appoinmentSection01{
+	background: url(../images/bg/3.jpg) no-repeat center center / cover;
+	position: relative;
+	padding: 290px 0 103px;
+}
+.appoinmentSection01 .secTitle{
+	font-size: 55px;
+	line-height: 60px;
+	margin-bottom: 45px;
+}
+.pdAcc{
+	padding-left: 40px;
+}
+.teamSection01{
+	position: relative;
+	padding: 120px 0;
+}
+.mt38{
+	margin-top: 38px;
+}
+.chooseSection{
+	position: relative;
+	background: url(../images/bg/5.jpg) no-repeat center center / cover;
+	padding: 120px 0 157px;
+}
+.chooseSection .secTitle{
+	font-size: 55px;
+	margin-bottom: 21px;
+}
+.chooseSection .secDesc{
+	color: #7f849b;
+    line-height: 26px;
+    padding-right: 50px;
+    margin-bottom: 38px;
+}
+.chooseSection .qu_btn{
+	background: #fff;
+	color: var(--theme-color);
+	padding: 0 46px;
+}
+.chooseSection .qu_btn:hover{
+	color: #fff;
+}
+.chooseSection .qu_btn:before{
+	background: linear-gradient(90deg, rgba(237,28,36,1) 0%, rgba(237,82,28,1) 100%);
+}
+.mt44{
+	margin-top: 44px;
+}
+.testimonialSection01{
+	position: relative;
+	padding: 0 0 80px;
+}
+.testimonialSection01 .secTitle{
+	margin-bottom: 40px;
+}
+.cta{
+	position: relative;
+	z-index: 2;
+	background: #fff;
+	padding: 45px 55px;
+	margin: -87px 0 119px;
+    -webkit-box-shadow: 0px 10px 90px 0px rgba(13, 30, 53, 0.05);
+    -moz-box-shadow:    0px 10px 90px 0px rgba(13, 30, 53, 0.05);
+    box-shadow:         0px 10px 90px 0px rgba(13, 30, 53, 0.05);
+}
+.blogSectiont01{
+	position: relative;
+	padding: 120px 0;
+	background: #f7f7f7;
+}
+.ctaBcon{
+	position: relative;
+	padding: 47px 0 0 45px;
+}
+.ctaBcon .secTitle{
+	font-size: 55px;
+	line-height: 58px;
+	margin: 0 0 23px;
+}
+.fdivider{
+	border-top: 1px solid #232323;
+	margin: 97px 0 97px;
+}
+.PL28{
+	padding-left: 28px;
+}
+.aboutSection02{
+	position: relative;
+	padding: 120px 0;
+	background: url(../images/bg/6.png) no-repeat center bottom;
+}
+.absThumb{
+	position: relative;
+}
+.absThumb img{
+	max-width: 100%;
+}
+.absCon{
+	position: relative;
+	padding: 48px 0 0 25px;
+}
+.absCon .secTitle{
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 21px;
+}
+.absCon .subTitle{
+	margin-bottom: 34px;
+}
+.absCon .secDesc{
+	font-size: 18px;
+	color: #7f8388;
+	line-height: 30px;
+	font-weight: 500;
+	margin: 0 0 33px;
+}
+.absCon .listItem{
+	margin-bottom: 34px;
+}
+.absCon img{
+	max-width: 100%;
+}
+.signAuthor{
+	font-size: 14px;
+	color: #7f8388;
+	line-height: 32px;
+	margin: 12px 0 0;
+}
+.signAuthor span{
+	color: var(--theme-color);
+}
+.chooseSection02{
+    background: url(../images/bg/8.jpg) no-repeat center center / cover;
+    padding: 120px 0 280px;
+}
+.mt8 {
+    margin-top: 8px;
+}
+.chooseSection02 .icon_box_05{
+	margin-bottom: 35px;
+}
+.appoinmentSection02{
+	margin-top: -200px;
+	z-index: 2;
+	position: relative;
+	padding: 0;
+}
+.reviewArea{
+	position: relative;
+	min-height: 639px;
+	background: url(../images/bg/7.png) no-repeat bottom left #f7f7f7;
+	padding: 73px 75px 0;
+}
+.reviewArea .secTitle{
+	font-size: 36px;
+	line-height: 44px;
+	margin-bottom: 15px;
+}
+.reviewArea .secDesc{
+	color: #7f8388;
+	line-height: 26px;
+	margin: 0 0 29px;
+}
+.customers{
+	font-size: 16px;
+	line-height: 28px;
+	color: #1a1a1a;
+	font-weight: 500;
+}
+.customers span{
+	color: var(--theme-color);
+	font-weight: 700;
+	border-bottom: 2px solid var(--theme-color);
+}
+.serviceSection02{
+	position: relative;
+	background: url(../images/bg/8.png) no-repeat center bottom;
+	padding: 120px 0 265px;
+}
+.serviceSection02 .secTitle{
+	margin-bottom: 58px;
+}
+.videoFact01{
+	position: relative;
+	background: url(../images/bg/11.jpg) no-repeat center bottom;
+	margin-top: -175px;
+	padding-bottom: 60px;
+}
+.portfolioSection02{
+	position: relative;
+	padding: 60px 0 90px;
+	background: url(../images/bg/10.png) no-repeat right bottom #fcfcfc;
+}
+.portfolioSection02 .secTitle{
+	font-size: 55px;
+}
+.processSection02{
+	position: relative;
+	background: url(../images/bg/9.jpg) no-repeat center center / cover;
+	padding: 120px 0 114px;
+}
+.worCon{
+	position: relative;
+    padding: 35px 0 0 25px;
+}
+.worCon .secTitle{
+	font-size: 48px;
+	line-height: 42px;
+	margin-bottom: 30px;
+}
+.worCon .secDesc{
+	color: #7f8388;
+	margin: 0 30px 50px 0;
+}
+.appStore{
+	position: relative;
+	background: url(../images/bg/10.jpg) no-repeat center center / cover;
+	padding: 142px 0 71px;
+}
+.appStore .secTitle{
+	color: #fff;
+	font-size: 48px;
+	line-height: 58px;
+	margin-bottom: 38px;
+}
+.appStore .skrItem{
+	margin-right: -130px;
+    margin-left: -32px;
+}
+.appStore .skrItem:first-child{
+	margin-left: 12px;
+    margin-right: -180px;
+    margin-top: 26px;
+}
+.pricingSection01{
+	position: relative;
+	padding: 120px 0 400px;
+	background: url(../images/bg/11.png) center bottom;
+}
+.pricingSection01 .secTitle{
+	margin-bottom: 130px;
+}
+.testimonialSection02{
+	position: relative;
+	z-index: 2;
+	margin: -310px 0 -302px;
+}
+.blogSectiont02{
+	position: relative;
+	background: url(../images/bg/12.png) no-repeat left top #ffe0e1;
+	padding: 423px 0 120px;
+}
+.aboutSection03{
+	position: relative;
+	background: url(../images/bg/13.png) no-repeat left top #fbd5d6;
+	padding: 120px 0;
+}
+.aboutSection03 .absThumb{
+	margin-left: -20px;
+}
+.aboutSection03 .subTitle{
+	margin-top: 43px;
+}
+.aboutSection03 .secTitle{
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 31px;
+}
+.aboutSection03 .secDesc{
+	font-size: 17px;
+	line-height: 30px;
+	color: #946466;
+	font-weight: 500;
+	margin: 0 70px 40px 0;
+}
+.aboutSection03 .fact_01 h2{
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 700;
+}
+.aboutSection03 .fact_01 p{
+	font-size: 20px;
+}
+.serviceSection03{
+	position: relative;
+	padding: 120px 0;
+}
+.serviceSection03 .secDesc{
+	font-size: 18px;
+	color: #1a1a1a;
+	font-weight: 500;
+	margin: 34px 0 9px;
+}
+.serviceSection03 h4{
+	position: relative;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+    color: var(--theme-color);
+    margin: 0 0 20px;
+}
+.serviceSection03 h4:after{
+	position: absolute;
+	left: -24px;
+	bottom: -76px;
+	content: '';
+	width: 77px;
+	height: 74px;
+	background: url(../images/home3/2.png) no-repeat left bottom;
+}
+.serviceSection03 .btMr{
+	top: auto;
+	bottom: 45px;
+}
+.companySec01{
+	position: relative;
+	background: #f6f6f6;
+	padding: 120px 0 325px;
+	margin-left: 120px;
+}
+.companySec01 img{
+	max-width: 100%;
+}
+.comCon{
+	position: relative;
+	padding: 15px 0 0 40px;
+}
+.comCon .secTitle{
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 32px;
+}
+.comCon .secDesc{
+	margin: 0 20px 26px 0;
+}
+.appoinmentSection03{
+	position: relative;
+	padding: 0 0 120px;
+	margin: -208px 0 0;
+}
+.appoinmentSection03 .appointment_form{
+	background: #fff;
+    -webkit-box-shadow: 0px 20px 60px 0px rgba(23, 30, 39, 0.05);
+    -moz-box-shadow:    0px 20px 60px 0px rgba(23, 30, 39, 0.05);
+    box-shadow:         0px 20px 60px 0px rgba(23, 30, 39, 0.05);
+}
+.appoinmentSection03 input[type="email"], 
+.appoinmentSection03 input[type="text"], 
+.appoinmentSection03 input[type="number"], 
+.appoinmentSection03 input[type="url"], 
+.appoinmentSection03 input[type="tel"], 
+.appoinmentSection03 input[type="password"], 
+.appoinmentSection03 textarea, 
+.appoinmentSection03 select, 
+.appoinmentSection03 .nice-select{
+	background: #f6f6f6;
+	box-shadow: none;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.appoinmentSection03 textarea{
+	margin-bottom: 40px;
+}
+.appoinmentSection03 textarea:focus{
+	box-shadow: none;
+}
+.appoinmentSection03 .appointment_form > p{
+	font-size: 16px;
+	margin-bottom: 6px;
+}
+.appoinmentSection03 .appointment_form > h3{
+	margin-bottom: 42px;
+}
+.appoinmentSection03 .input-field i{
+	font-size: 16px;
+}
+.appoinmentSection03 .reviewArea{
+	background: linear-gradient(90deg, rgba(237,28,36,1) 0%, rgba(237,82,28,1) 100%);
+	padding-bottom: 75px;
+}
+.appoinmentSection03 .reviewArea *{
+	color: #fff;
+	border-color: #fff;
+}
+.appoinmentSection03 .reviewArea .customers{
+	margin-bottom: 35px;
+}
+.reviewArea .hpAuthor{
+	margin-top: 57px;
+}
+.teamSection02{
+	position: relative;
+	min-height: 905px;
+	background: url(../images/bg/12.jpg) no-repeat center center / cover;
+	padding: 120px 0 0;
+}
+.ctaSection{
+	position: relative;
+	z-index: 1;
+	margin-top: -30px;
+	padding: 0 0 120px;
+}
+.chooseSection03{
+	position: relative;
+	padding: 0 0 120px;
+}
+.chooseSection03 .pdAcc{
+	padding-left: 15px;
+	padding-right: 60px;
+    padding-top: 53px;
+}
+.chooseSection03 .quAccordion .card{
+	-webkit-box-shadow: 0px 10px 34px 0px rgba(18, 21, 24, 0.05);
+    -moz-box-shadow:    0px 10px 34px 0px rgba(18, 21, 24, 0.05);
+    box-shadow:         0px 10px 34px 0px rgba(18, 21, 24, 0.05);
+}
+.chooseSection03 .secTitle{
+	font-size: 48px;
+	line-height: 46px;
+	margin-bottom: 47px;
+}
+.chooseSection03:after{
+	position: absolute;
+	left: 0;
+	bottom: -342px;
+	width: 281px;
+	height: 687px;
+	content: '';
+	z-index: 1;
+	background: url(../images/bg/16.png) no-repeat left top;
+}
+.chImage{
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.chImage img{
+    max-width: 100%;
+}
+.portfolioSection03{
+	position: relative;
+	padding: 120px 0;
+	margin: 0 115px;
+	background: #eaeaea;
+}
+.blogSectiont03{
+	position: relative;
+	padding: 120px 0;
+}
+.aboutSection04{
+	position: relative;
+	padding: 120px 0 275px;
+}
+.abpd{
+	position: relative;
+	padding: 109px 0 0 40px;
+}
+.abpd .secTitle{
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 34px;
+}
+.abpd .secDesc{
+	line-height: 26px;
+	margin-bottom: 36px;
+}
+.abpd .hpAuthor{
+	padding: 2px 0 0 101px;
+}
+.abpd .hpAuthor img{
+	width: 79px;
+	height: 80px;
+	border-radius: 0;
+}
+.abpd .hpAuthor p{
+	font-size: 18px;
+	line-height: 31px;
+	color: var(--theme-color);
+	font-weight: 500;
+	margin: 0 0 4px;
+}
+.abpd .hpAuthor h3{
+	font-size: 30px;
+	line-height: 40px;
+	margin: 0;
+}
+.videoFact01.bg_fef4f4{
+	background: #fef4f4;
+	margin: 0 0 -29px;
+	padding: 0;
+}
+.videoFact01.bg_fef4f4 .row{
+	position: relative;
+	top: -158px;
+}
+.teamSection01.bg_fef4f4{
+	background: #fef4f4;
+	padding: 0 0 90px;
+}
+.abcs01{
+	position: relative;
+	background: #fff;
+	padding: 120px 0;
+}
+.abcs01:after{
+	display: none;
+}
+.abSpd{
+	padding-bottom: 280px;
+}
+.videoFact01.bg_f9f9f9{
+	background: url(../images/bg/13.jpg) no-repeat top left #f9f9f9;
+	margin: 0 0 -29px;
+	padding: 0;
+}
+.videoFact01.bg_f9f9f9 .row{
+	position: relative;
+	top: -155px;
+}
+.processSection03{
+	background: url(../images/bg/14.jpg) no-repeat bottom center #f9f9f9;
+	position: relative;
+	padding: 0 0 85px;
+}
+.abHisSection{
+	position: relative;
+	padding: 120px 0 270px;
+	background: url(../images/bg/17.png) no-repeat center center /cover;
+}
+.abHisSection .absThumb {
+    margin-right: -30px;
+}
+.hisCon{
+	position: relative;
+	padding: 35px 0 0 65px;
+}
+.hisCon .secTitle{
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 34px;
+}
+.hisCon .secDesc{
+	line-height: 26px;
+	margin-bottom: 38px;
+}
+.hisCon .single_skill p{
+	color: #1a1a1a;
+}
+.hisCon .ss_parent{
+	background: #ffecec;
+}
+.hisCon .ss_child{
+	background: var(--theme-color);
+}
+.hisCon .ss_parent span{
+	color: #1a1a1a;
+	background: url(../images/bg/skills.svg) no-repeat center center / cover;
+}
+.hisCon .hpAuthor{
+	margin-top: 40px;
+}
+.comFunfact{
+	position: relative;
+	background: #f9f9f9;
+	margin-bottom: -25px;
+}
+.comFunfact .funfactArea{
+	top: -148px;
+	position: relative;
+	width: 100%;
+	border: 10px solid var(--theme-color);
+}
+.comHistorySec{
+	position: relative;
+	background: #f9f9f9;
+	padding: 0 0 120px;
+}
+.servicePage01{
+	position: relative;
+	padding: 120px 0 90px;
+}
+.sc01{
+	position: relative;
+	padding: 120px 0 210px;
+	background: url(../images/bg/15.jpg) no-repeat center center / cover;
+}
+.sc01:after{
+	display: none;
+}
+.ssprcessSec{
+	position: relative;
+	background: #f9f9f9;
+	padding: 120px 0 85px;
+	margin: 0 115px;
+}
+.relatedService{
+	position: relative;
+	padding: 120px 0 90px;
+}
+.rlsContent h2{
+	font-size: 48px;
+	line-height: 60px;
+	margin: 21px 0 22px;
+}
+.rlsContent p{
+	line-height: 28px;
+	color: #7f8388;
+	margin: 0 0 28px;
+}
+.bg_f9f9f9{
+	background: #f9f9f9;
+}
+.portfolioPage{
+	position: relative;
+	padding: 120px 0 90px;
+}
+.rpalnalysis h2{
+	font-size: 36px;
+	line-height: 40px;
+	margin: 0 0 20px;
+}
+.rpalnalysis p{
+	line-height: 28px;
+	color: #7f8388;
+	margin: 0 0 44px;
+}
+.rpalnalysis img{
+	max-width: 100%;
+	height: auto;
+}
+.teamPage{
+	position: relative;
+	padding: 120px 0 90px;
+}
+.coniconboxPage{
+	position: relative;
+	padding: 115px 0 125px;
+	background: #ffedee;
+}
+.contactSection{
+	position: relative;
+	padding: 120px 0;
+}
+.contactSection .col-md-8{
+	padding-right: 50px;
+}
+.contactSection .appointment_form{
+	background: transparent;
+	padding: 0;
+}
+.contactSection .appointment_form > p{
+	font-size: 18px;
+	margin-bottom: 11px;
+}
+.contactSection .appointment_form > h3{
+	font-size: 48px;
+	margin-bottom: 45px;
+}
+.contactSection input[type="email"], 
+.contactSection input[type="text"], 
+.contactSection input[type="number"], 
+.contactSection input[type="url"], 
+.contactSection input[type="tel"], 
+.contactSection input[type="password"], 
+.contactSection textarea, 
+.contactSection select, 
+.contactSection .nice-select{
+	border: 2px solid #f6f6f6;
+	border-bottom: none;
+	margin: 0 0 20px;
+	-webkit-box-shadow: 0px 12px 40px 0px rgba(7, 17, 29, 0.05);
+	-moz-box-shadow: 0px 12px 40px 0px rgba(7, 17, 29, 0.05);
+	box-shadow: 0px 12px 40px 0px rgba(7, 17, 29, 0.05);
+}
+.contactSection textarea{
+	margin-bottom: 19px;
+	height: 170px;
+}
+.contactSection .qu_btn{
+	padding: 0 47px;
+}
+.chatNow{
+	position: relative;
+	text-align: center;
+	background: url(../images/bg/16.jpg) no-repeat center center / cover;
+	padding: 310px 35px 52px;
+}
+.chatNow h4{
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--theme-color);
+	margin: 0 0 16px;
+}
+.chatNow p{
+	font-size: 18px;
+	line-height: 26px;
+	color: #1a1a1a;
+	font-weight: 700;
+	margin: 0 0 30px;
+}
+.mapSection{
+	position: relative;
+}
+
+

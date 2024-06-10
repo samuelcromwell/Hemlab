@@ -1,0 +1,1067 @@
+/*
+ Theme Name: Quera
+ Theme URI: https://themeforest.net/user/themewar/portfolio
+ Author: themewar
+ Author URI: 
+ Description: Quera - Business & Finance Consultancy Responsive HTML5 Template
+ Version: 1.0
+ License:
+ License URI:
+*/
+
+/*=======================================================================
+[Table of contents]
+=========================================================================
+
+1. Responsive For Extra large Device 2
+2. Desktop Device
+3. Responsive For Tab Device
+4. Comon in Tab & Mobile
+5. Responsive For Mobile Device
+*/
+
+/*------------------------------------------------------------------------------------
+/ 1. Responsive For Extra large Device 2
+--------------------------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1700px){
+	.abthumb{
+		right: -85px;
+	}
+    .abthumb img {
+	    max-width: 800px;
+	}
+	.header01:after, .header01:before{
+		width: 71%;
+	}
+	.tparrows.custom{
+		width: 60px;
+		height: 60px;
+	}
+	.tparrows.custom:before{
+		line-height: 60px;
+		font-size: 16px;
+	}
+	.slider_01 .tparrows.tp-leftarrow{
+		left: -120px !important;
+	}
+	.slider_01 .tparrows.tp-rightarrow{
+		left: calc(100% + 120px) !important;
+	}
+	.slider_01 .tp-caption{
+		position: relative;
+		left: 50px;
+	}
+	.slider_02 .tparrows.custom{
+		left: calc(100% - 40px) !important;
+	}
+	.funfactArea{
+		width: 85%;
+	}
+	.quAccordion .card .card-body{
+		padding-right: 15px;
+	}
+	.appointment_form{
+		padding-right: 60px;
+		padding-left: 60px;
+	}
+	.folioItem01 .folioContent{
+		padding: 0 50px;
+	    transform: translate3d(0, -27px, 0);
+	    -moz-transform: translate3d(0, -27px, 0);
+	    -webkit-transform: translate3d(0, -27px, 0);
+	}
+	.folioItem01:hover .folioContent {
+	    transform: translate3d(0, -107px, 0);
+	    -moz-transform: translate3d(0, -107px, 0);
+	    -webkit-transform: translate3d(0, -107px, 0);
+	}
+	.folioItem01 .fm{
+		left: 50px;
+		bottom: 45px;
+	}
+	.gallery{
+		margin-right: -7px;
+	}
+	.topbar02, .header02{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.appStore .skrItem {
+	    margin-right: -80px;
+	    margin-left: -100px;
+	}
+	.appStore .skrItem:first-child {
+	    margin-left: -88px;
+	    margin-right: -100px;
+	}
+	.priceItem{
+		padding-right: 35px;
+		padding-left: 35px;
+	}
+	.testi_wrap02{
+		margin: 0 30px;
+		padding-left: 50px;
+		padding-right: 80px;
+	}
+	.testiItem02{
+		padding: 18px 25px 0 15px;
+	}
+	.testiItem02 .quotation{
+		font-size: 27px;
+		line-height: 42px;
+	}
+	.blogItem02{
+		padding: 50px 45px 45px;
+	}
+	.header02 .mainMenu > ul li:nth-last-child(2) ul ul,
+	.header02 .mainMenu > ul li:nth-last-child(1) ul ul{
+		left: auto;
+    	right: calc(100% + 1px);
+	}
+	.absCon{
+		padding-top: 25px;
+	}
+	.absCon .secTitle{
+		font-size: 47px;
+	}
+	.fact_02{
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	.header03{
+		width: calc(100% - 80px);
+	}
+	.fixedHeader.header03{
+		padding: 0 40px;
+	}
+	.companySec01, 
+	.portfolioSection03{
+		margin: 0;
+	}
+	.fThumb{
+		margin-left: 15px;
+	}
+	.folioSlider02.owl-carousel .owl-nav{
+		margin-top: 50px;
+	}
+	.footer_02{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.video_banner img{
+		height: 315px;
+		object-fit: cover;
+	}
+	.icon_box_01{
+		padding-right: 35px;
+		padding-left: 35px;
+	}
+	.sidebar{
+	    padding-left: 15px;
+	}
+	.sidebar.lsb{
+	    padding-left: 0;
+	    padding-right: 15px;
+	}
+	.sicc_list li .children{
+		margin-left: 100px;
+	}
+}
+
+/*------------------------------------------------------------------------------------
+/ 2. Desktop Device
+/--------------------------------------------------------------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px){
+    .header01 .lang{
+    	display: none;
+    }
+    .header01:after,
+    .header01:before{
+    	width: 71%;
+    }
+    .abthumb {
+	    position: absolute;
+	    right: 0;
+	    bottom: -84px;
+	    margin-left: -175px;
+	}
+	.funfactArea{
+		width: 95%;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.absCon{
+		padding-top: 0;
+	}
+	.testi_wrap02{
+		margin: 0 30px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.testiItem02{
+		padding-top: 0;
+		padding-left: 0;
+	}
+	.testimonialslider02.owl-carousel .owl-nav{
+		right: -25px;
+	}
+	.testimonialslider02.owl-carousel .tstThumb{
+		overflow: hidden;
+	}
+	.testimonialslider02.owl-carousel .tstThumb img{
+		width: auto;
+	}
+	.testiItem02 .quotation{
+		font-size: 26px;
+		line-height: 40px;
+	}
+	.absCon{
+		padding-top: 0 !important;
+	}
+	.folioSlider02.owl-carousel .owl-nav{
+		height: 70px;
+		width: 120px;
+		margin: 35px 0 0;
+	}
+	.folioSlider02.owl-carousel .owl-nav button{
+		font-size: 20px;
+		line-height: 70px;
+	}
+	.footer_02 .SubsrcribeForm .yikes-easy-mc-form .yikes-easy-mc-submit-button{
+		padding: 0 30px;
+	}
+	.footer_02 .aboutWidget .phone{
+		font-size: 32px;
+	}
+	.sidebar .widget{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.sidebar .widget_categories ul li{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.blogContent02{
+		padding-left: 35px;
+		padding-right: 25px;
+	}
+	.blogContent02 h3{
+		line-height: 36px;
+		font-size: 26px;
+	}
+	.sic_details{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.commentForm{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.sicc_list li .children{
+		margin-left: 25px;
+	}
+}
+@media (max-width: 1199px){
+	.logo{
+		padding: 41px 0;
+	}
+    header .menuToggler{
+        display: block;
+        font-size: 16px;
+        line-height: 45px;
+        color: #232424;
+        padding: 0;
+        position: relative;
+        margin: 25px 21px 25px 0;
+        background: #eeeeee;
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .navbar01{
+    	justify-content: flex-end;
+    }
+    .mainMenu {
+        display: none;
+    }
+    .abthumb img{
+    	max-width: 100%;
+    }
+    .testimonialslider01.owl-carousel .owl-stage-outer {
+	    height: calc(100% + 30px);
+	    padding: 15px;
+	    width: calc(100% + 30px);
+    	left: -15px;
+	}
+    .pdAcc{
+    	padding-left: 15px;
+    }
+    .ctaBcon{
+    	padding-left: 0;
+    }
+    .chooseSection .secDesc,
+	.aboutSection01 .secDesc{
+		padding-right: 0;
+	}
+	.tparrows.custom{
+		width: 60px;
+		height: 60px;
+	}
+	.tparrows.custom:before{
+		line-height: 60px;
+		font-size: 16px;
+	}
+	.slider_01 .tparrows.tp-leftarrow{
+		left: -130px !important;
+	}
+	.slider_01 .tparrows.tp-rightarrow{
+		left: calc(100% + 130px) !important;
+	}
+	.slider_02 .tparrows.custom {
+	    left: calc(100% - 80px) !important;
+	}
+	.clientLogo01 .secTitle{
+		text-align: center;
+		margin: 0 0 30px;
+	}
+	.icon_box_02 p br{
+		display: none;
+	}
+	.pdAcc{
+		padding-top: 50px;
+	}
+	.support{
+		margin: 0;
+	}
+	.chooseSection .secTitle{
+		font-size: 50px;
+	}
+	.pp_post_item{
+		padding-right: 0;
+	}
+    .PL28 {
+	    padding-left: 0;
+	}
+	.anLayer img{
+		display: none;
+	}
+	.searchBtn.active .header01SearchBar{
+		top: 62px;
+	}
+	.header02, .topbar02{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.header02 .logo{
+		padding: 15px 0;
+	}
+	.comCon, .worCon, .absCon{
+		padding: 45px 0 0;
+	}
+	.accessNav .qu_btn,
+	.navleft .icon_box_04{
+		margin-left: 0;
+	}
+	.reviewArea{
+		margin-bottom: 40px;
+	}
+    .fact_02{
+    	margin-top: 30px;
+    }
+	.skrItem{
+		margin: 30px 0 0 !important;
+	}
+	.priceItem{
+		margin: 0 0 110px;
+	}
+	.blogItem01{
+		margin-bottom: 30px;
+	}
+	.pricingSection01{
+		padding-bottom: 300px;
+	}
+	.chooseSection03::after{
+		display: none;
+	}
+	.footer_02 .gallery{
+		padding-right: 0;
+	}
+	 .ssprcessSec, .companySec01, .portfolioSection03{
+		margin: 0;
+	}
+	.aboutSection03 .secDesc, .comCon .secDesc{
+		margin-right: 0;
+	}
+	.chooseSection03 .pdAcc{
+		padding-right: 15px;
+	}
+	.header03 .logo{
+		padding: 16px 0;
+	}
+	.footer_02{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.header03 .header01SearchBar{
+		right: -10px;
+	}
+	.header03 .searchBtn.active .header01SearchBar {
+	    top: 64px;
+	}
+	.header03 .icon_box_04{
+		display: none;
+	}
+	.header03 .accessNav .qu_btn{
+		margin-left: 0;
+	}
+	.header03{
+		width: 100%;
+		padding: 0 20px;
+	}
+	.fixedHeader.header03{
+		padding: 0 20px;
+	}
+	.header03 .logo{
+		margin-right: auto;
+	}
+	.marqueeText h2{
+		font-size: 60px;
+	}
+	.fThumb{
+		margin-left: 10px;
+	}
+	.chImage{
+		margin: 30px 0 0;
+	}
+	.folioItem03 .folioContent h3{
+		font-size: 20px;
+	}
+	.hisCon, .abpd{
+		padding: 40px 0 0;
+	}
+	.accessNav a.userBtn{
+		margin-right: 15px;
+		margin-left: 0;
+	}
+	.abpd .secTitle{
+		font-size: 44px;
+	}
+	.banner-title{
+		font-size: 50px;
+		line-height: 60px;
+	}
+	.abHisSection .absThumb{
+		margin-right: 0;
+	}
+	.ssContent{
+		padding: 40px 0 0;
+	}
+	.contactSection .col-md-8{
+		padding-right: 15px;
+	}
+	.sidebar{
+	    padding-left: 0;
+	}
+	.sidebar.lsb{
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	.sic_details{
+		margin: 0;
+	}
+}
+/*------------------------------------------------------------------------------------
+/ 3. Responsive For Tab Device
+/--------------------------------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 991px){
+	.sicc_list li .children{
+		margin-left: 45px;
+	}
+	.chatNow{
+		padding: 250px 20px 52px;
+	}
+    .secTitle{
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.funfactArea .fact_01{
+		padding-right: 15px;
+	}
+	.footer_01 .SubsrcribeForm .yikes-easy-mc-form .yikes-easy-mc-submit-button{
+		padding: 0 30px;
+	}
+	.topbar{
+		justify-content: flex-end;
+	}
+	.topbar p{
+		display: none;
+	}
+	.help_area > p{
+		left: 15px;
+	}
+	.help_area{
+		padding-left: 110px;
+		max-width: 645px;
+	}
+	.hcinner{
+		position: relative;
+		max-height: none;
+	}
+	.sfContent{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.fsMeta{
+		padding-left: 22px;
+	}
+	.btnMeta .qu_btn {
+	    padding: 0 28px;
+	}
+	.fsMeta h4{
+		font-size: 20px;
+	}
+	.blogContent02{
+		padding-left: 35px;
+		padding-right: 30px;
+	}
+}
+
+/*------------------------------------------------------------------------------------
+/ 4. Comon in Tab & Mobile
+/--------------------------------------------------------------------------------------*/
+@media (max-width: 991px){
+	.ctaText{
+		padding: 15px 30px;
+	}
+	.blogItem03{
+		margin-bottom: 30px;
+	}
+	.testi_wrap02{
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 80px;
+		margin: 0 40px;
+	}
+	.testimonialslider02.owl-carousel .owl-nav {
+	    position: relative;
+	    right: 0;
+	    margin: auto;
+	    text-align: center;
+	    display: block;
+	    top: 260px;
+	    transform: rotate(90deg);
+	    z-index: 2;
+	    text-align: center;
+	}
+	.testiItem02{
+		padding: 40px 0 15px;
+	}
+    .testiItem01{
+    	padding-left: 25px;
+    	padding-right: 25px;
+    }
+	.aboutWidget, .footer_01 .widget{
+		margin-bottom: 40px;
+	}
+	.noPaddingRight {
+	    padding-right: 15px;
+	}
+	.chooseSection .secTitle{
+		font-size: 40px;
+	}
+	.folioItem01 .folioContent{
+		padding: 0 20px;
+	    transform: translate3d(0, -27px, 0);
+	    -moz-transform: translate3d(0, -27px, 0);
+	    -webkit-transform: translate3d(0, -27px, 0);
+	}
+	.folioItem01:hover .folioContent {
+	    transform: translate3d(0, -95px, 0);
+	    -moz-transform: translate3d(0, -95px, 0);
+	    -webkit-transform: translate3d(0, -95px, 0);
+	}
+	.folioItem01 .fm{
+		left: 20px;
+		bottom: 20px;
+	}
+	.folioContent h3{
+		font-size: 24px;
+		margin: 0;
+	}
+	.fact_01 p br, .icon_box_02 p br{
+		display: none;
+	}
+	.processSection01{
+		padding-bottom: 120px;
+	}
+    .abthumb{
+    	right: 0;
+    	position: relative;
+    	bottom: 0;
+    	margin: 30px 0 0;
+    }
+    .funfactArea{
+    	width: 100%;
+    	padding: 40px 30px;
+    	top: -70px;
+    }
+    .fact_01 h2{
+    	font-size: 70px;
+    }
+    .icon_box_04{
+    	margin: 40px 0 0;
+    }
+    .orcta{
+    	margin: 30px 0;
+    }
+    .orcta:after{
+    	width: 174px;
+    	height: 10px;
+    	top: 34px;
+    	left: -50px;
+    }
+    .contactSection .appointment_form > h3, 
+    .abpd .secTitle, .hisCon .secTitle, .rlsContent h2, 
+    .aboutSection03 .secTitle, .chooseSection03 .secTitle,
+    .absCon .secTitle, .worCon .secTitle, .comCon .secTitle, 
+    .appStore .secTitle, .portfolioSection02 .secTitle{
+    	font-size: 36px;
+    	line-height: 48px;
+    }
+    .filter_menu{
+		margin: 0 0 50px;
+		justify-content: flex-start !important;
+	}
+	.aboutSection03 .absThumb{
+		margin: 30px 0 0;
+	}
+	.folioSlider02.owl-carousel .owl-nav{
+		float: left;
+	}
+	.banner-title{
+		font-size: 45px;
+		line-height: 55px;
+	}
+	.ssContent .secTitle{
+		font-size: 38px;
+		line-height: 50px;
+	}
+	.contetn_404 h3{
+		font-size: 40px;
+	}
+	.icon_box_10{
+		margin-bottom: 30px;
+	}
+	.sidebar{
+	    margin: 60px 0 0;
+	}
+	.sidebar.lsb{
+	    margin: 0 0 60px;
+	}
+}
+
+/*------------------------------------------------------------------------------------
+/ 5. Responsive For Mobile Device
+--------------------------------------------------------------------------------------*/
+@media (max-width: 767px){
+	.post_author h5, .sicc_title{
+		font-size: 22px;
+	}
+	.commentForm .qu_btn{
+		padding: 0 35px;
+	}
+	.commentForm{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.sicc_list li .children{
+		margin-left: 15px;
+	}
+	.single_comment > img{
+		position: relative;
+		margin: 0 0 20px;
+	}
+	.single_comment{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.post_author{
+		padding-left: 25px;
+		padding-right: 20px;
+	}
+	.post_author img{
+		position: relative;
+		left: 0;
+		top: 0;
+		margin: 0 0 20px;
+	}
+	.socialShare{
+		text-align: left;
+		margin-top: 15px;
+	}
+	.sic_the_content blockquote, .sic_the_content blockquote.wp-block-quote{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.sic_details .bmeta{
+		display: block;
+		margin: 0 0 15px;
+	}
+	.sic_details .bmeta p{
+		margin: 0;
+	}
+	.sic_details{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.blogContent02 .bmeta{
+		display: block;
+	}
+	.blogContent02{
+		padding-left: 20px;
+		padding-right: 18px;
+	}
+	.blogContent02 h3{
+		font-size: 24px;
+		line-height: 36px;
+	}
+	.sidebar .widget{
+		padding-right: 18px;
+		padding-left: 20px;
+	}
+	.chatNow{
+		margin-top: 50px;
+	}
+	.icon_box_10 h3{
+		font-size: 22px;
+	}
+	.section_404{
+		padding: 140px 0 120px;
+	}
+	.contetn_404 img{
+		margin: 0;
+	}
+	.contetn_404 h3{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.contetn_404 p br{
+		display: none;
+	}
+	.serQuote{
+		padding-left: 30px;
+		padding-right: 25px;
+	}
+	.sfContent{
+		padding-left: 20px;
+		padding-right: 20px;
+		display: block;
+	}
+	.fsMeta{
+		padding: 0 0 20px;
+	}
+	.fsMeta:last-child{
+		padding-bottom: 0;
+	}
+	.ssQuote{
+		padding-left: 20px;
+	}
+	.ssQuote img{
+		position: relative;
+		left: 0;
+		margin: 0 0 15px;
+	}
+	.historyContent::after,
+	.reverse .historyContent::after{
+		left: 0;
+		right: auto;
+	}
+	.historyItem h2{
+		transform: none;
+		top: -100px;
+		right: auto;
+		left: 35px;
+		margin: 0;
+		bottom: auto;
+	}
+	.reverse.historyItem h2{
+		top: 15px;
+		left: 35px;
+	}
+	.historyItem{
+		padding-top: 100px;
+	}
+	.reverse.historyItem{
+		padding-right: 0;
+		padding-top: 0;
+		padding-bottom: 150px;
+	}
+	.reverse .historyContent, .historyContent{
+		padding-left: 20px;
+		padding-right: 0;
+		text-align: left;
+	}
+	.bars{
+		margin: 0;
+		right: auto;
+	}
+	.hcinner{
+		position: relative;
+		max-height: none;
+	}
+	.accessNav a.userBtn{
+		width: 45px;
+	    height: 45px;
+	    line-height: 42px;
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	.banner-title{
+		font-size: 34px;
+		line-height: 44px;
+	}
+	.page_banner .text-right {
+	    text-align: left !important;
+	}
+	.abpd .hpAuthor{
+		padding: 0;
+	}
+	.copyText{
+		text-align: center;
+	}
+	.footer_02 .widget{
+		margin: 30px 0 0;
+	}
+	.footer_02 .widget_title{
+		font-size: 22px;
+	}
+	.footer_02 .aboutWidget .phone{
+		font-size: 30px;
+	}
+	.blogItem03 .blogContent{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.noPadding{
+		padding: 0 15px;
+	}
+	.fThumb{
+		margin: 30px 0 0;
+	}
+	.chooseSlider.owl-carousel{
+		position: relative;
+		bottom: 0;
+		margin: 30px 0 0;
+	}
+	.marqueeText h2{
+		font-size: 30px;
+	}
+	.ctaSection .text-right {
+		margin-top: 25px;
+	    text-align: left !important;
+	}
+	.hpAuthor .author{
+		position: relative;
+		margin: 0 0 20px;
+	}
+	.hpAuthor{
+		padding-left: 0;
+	}
+	.footer_02{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.testimonialslider02.owl-carousel .owl-nav{
+		top: 150px;
+	}
+	.testi_wrap02{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.filter_menu{
+		display: block;
+	}
+	.apbtn{
+		margin: 0 0 10px;
+	}
+	.reviewArea{
+		padding: 45px 20px 0;
+		margin-bottom: 35px;
+	}
+	.reviewArea .secTitle{
+		font-size: 32px;
+	}
+	.helpSlider.owl-carousel .owl-nav{
+		top: -30px;
+	}
+	.help_area > p{
+		position: relative;
+		left: 0;
+		margin-bottom: 5px;
+	}
+	.helpSlider.owl-carousel p{
+		line-height: 24px;
+	}
+	.help_area::after{
+		display: none;
+	}
+	.help_area{
+		max-width: 100%;
+		height: auto;
+		padding: 8px 20px 0;
+	}
+	header .menuToggler{
+		margin-right: 0;
+	}
+	.topbar02 .justify-content-end{
+		justify-content: center !important;
+	}
+	.topbar02 p, .topbar02 .lang{
+		display: none;
+	}
+	.navleft .icon_box_04{
+		display: none;
+	}
+	.blogItem02{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.filter_menu li{
+		display: block;
+		margin: 10px 0;
+	}
+	.priceItem{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.appStore .skrItem:first-child, .appStore .skrItem{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.apbtnWrap p{
+		margin: 0 0 20px;
+	}
+	.apbtnWrap{
+		display: block;
+	}
+	.testi_wrap02{
+		margin: 0;
+	}
+	.logo{
+		padding: 15px 0;
+	}
+	.logo img{
+		height: 45px;
+	}
+	.header01 .navbar01{
+		justify-content: flex-end;
+		margin: -95px 0 0;
+	}
+    .cta{
+    	padding-left: 20px;
+    	padding-right: 20px;
+    }
+	.quAccordion .card{
+		padding-right: 25px;
+		padding-left: 25px;
+		padding-top: 60px;
+	}
+	.appointment_form{
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+	.sidebarMenuOverlay::before, .SMArea {
+	    width: 300px;
+	}
+	.searchBtn.active .header01SearchBar{
+		top: 62px;
+	}
+	.header01SearchBar{
+		right: -10px;
+	}
+	.topbar{
+		display: none;
+	}
+	.header01:after{
+		display: none;
+	}
+	.header01:before{
+		width: 100%;
+	}
+	.header01{
+		background: transparent;
+	}
+	.accessNav .qu_btn{
+		display: none;
+	}
+	.quAccordion .card .card-header h2 button span{
+		position: absolute;
+		left: 0;
+		top: -47px;
+	}
+	.quAccordion .card .card-header h2 button{
+		display: block;
+		line-height: 24px;
+	}
+	.fact_01{
+		margin-bottom: 30px;
+	}
+	.subTitle{
+		line-height: 24px;
+	}
+	.aboutSection01 .secTitle{
+		font-size: 31px;
+	}
+	.boxService{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.boxService .secTitle{
+		font-size: 34px;
+		line-height: 44px;
+	}
+	.client-slider.owl-carousel{
+		margin-bottom: 15px;
+	}
+	.secTitle{
+		font-size: 35px;
+		line-height: 48px;
+	}
+    .funfactArea{
+    	display: block;
+    	width: 100%;
+    	padding: 50px 30px;
+    	position: relative;
+    	top: -150px;
+    }
+    .spIcon{
+    	position: relative;
+    	margin: 0 0 15px;
+    }
+    .support{
+    	margin: 0;
+    	padding: 0;
+    }
+    .icon_box_06{
+    	padding-left: 95px;
+    }
+    .text-right .icon_box_06{
+    	padding-right: 95px;
+    }
+    .footer_01 .secTitle{
+    	margin: 0 0 30px;
+    }
+    .SubsrcribeForm .yikes-easy-mc-form .yikes-easy-mc-submit-button{
+    	position: relative;
+    	margin: 10px 0 0 !important;
+    }
+    .fcopyright{
+    	text-align: center;
+    }
+    .copyMenu{
+    	text-align: center;
+    	margin: 15px 0 0;
+    }
+}

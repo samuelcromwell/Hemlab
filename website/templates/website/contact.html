@@ -3,119 +3,118 @@
 {% block content %}
 {% load static %}
   <!-- Begin:: Slider Section -->
-        <section class="page_banner" style="background-image: url('{% static 'images/bg/contact.jpg' %}');">
-            <div class="container largeContainer">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="banner-title">Contact Us</h2>
-                    </div>
-                    <div class="col-md-6 text-right">
-                        <p class="breadcrumbs"><a href="{% url 'home' %}" rel="v:url"><i class="twi-home-alt1"></i>Home</a><span>/</span>Contact Us</p>
-                    </div>
+<section class="page_banner" style="background-image: url('{% static 'images/bg/contact.jpg' %}');">
+    <div class="container largeContainer">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="banner-title">Contact Us</h2>
+            </div>
+            <div class="col-md-6 text-right">
+                <p class="breadcrumbs"><a href="{% url 'home' %}" rel="v:url"><i class="twi-home-alt1"></i>Home</a><span>/</span>Contact Us</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End:: Slider Section -->
+
+<!-- Icon Box Start -->
+<section class="coniconboxPage">
+    <div class="container largeContainer">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box_10">
+                    <div class="ib_box"><i class="icons-location-pin"></i></div>
+                    <h3>Office Address:</h3>
+                    <p>Moi Avenue<br>Nairobi, Kenya.</p>
                 </div>
             </div>
-        </section>
-        <!-- End:: Slider Section -->
-
- <!-- Icon Box Start -->
-        <section class="coniconboxPage">
-            <div class="container largeContainer">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="icon_box_10">
-                            <div class="ib_box"><i class="icons-location-pin"></i></div>
-                            <h3>Office Address:</h3>
-                            <p>Moi Avenue<br>Nairobi, Kenya.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="icon_box_10">
-                            <div class="ib_box"><i class="icons-telephone"></i></div>
-                            <h3>Call Us For Help:</h3>
-                            <p>+254 2563 2562,<br> +254 3654 2156</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="icon_box_10">
-                            <div class="ib_box"><i class="icons-envelope-1"></i></div>
-                            <h3>Mail info:</h3>
-                            <p>info@hemlab.com<br> hemlabinfo.com</p>
-                        </div>
-                    </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box_10">
+                    <div class="ib_box"><i class="icons-telephone"></i></div>
+                    <h3>Call Us For Help:</h3>
+                    <p>+254 2563 2562,<br> +254 3654 2156</p>
                 </div>
             </div>
-        </section>
-        <!-- Icon Box End -->
-
-        <!-- Contact Form Start -->
-        <section class="contactSection">
-            <div class="container largeContainer">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="appointment_form">
-                            <p>Your email address will not be published*</p>
-                            <h3>Send Us a Message</h3>
-                            <form action="#" method="post" class="row" id="contact_form">
-                                <div class="input-field col-md-6">
-                                    <i class="twi-user2"></i>
-                                    <input class="required" type="text" name="con_name" placeholder="Your Name">
-                                </div>
-                                <div class="input-field col-md-6">
-                                    <i class="twi-envelope2"></i>
-                                    <input class="required" type="email" name="con_email" placeholder="Email Address">
-                                </div>
-                                <div class="input-field icRight col-md-12">
-                                    <select class="required" name="con_subject">
-                                        <option selected="selected">Select Subjects</option>
-                                        <option>Finance Consultant</option>
-                                        <option>Business Consultant</option>
-                                        <option>Financial Advices</option>
-                                        <option>Business Growth</option>
-                                    </select>
-                                </div>
-                                <div class="input-field col-md-12">
-                                    <i class="twi-pen2"></i>
-                                    <textarea class="required" name="con_message" placeholder="Type Your Message"></textarea>
-                                </div>
-                                <div class="col-md-7 input-field">
-                                    <label>
-                                        <input type="checkbox" name="subscribe" value="Also subscribe us">
-                                        <span class="wpcf7-list-item-label">I Agree to get-e- mails about future conferences.</span>
-                                    </label>
-                                </div>
-                                <div class="input-field col-md-12">
-                                    <button type="submit" class="qu_btn">Submit Now</button>
-                                    <div class="con_message"></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="chatNow">
-                            <h4>Chat With Support</h4>
-                            <p>Let’s chat our live experts to get answer your question</p>
-                            <a href="javascript:void(0);" class="qu_btn">Live Chat</a>
-                        </div>
-                    </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box_10">
+                    <div class="ib_box"><i class="icons-envelope-1"></i></div>
+                    <h3>Mail info:</h3>
+                    <p>info@hemlab.com<br> hemlabinfo.com</p>
                 </div>
             </div>
-        </section>
-        <!-- Contact Form End -->
+        </div>
+    </div>
+</section>
+<!-- Icon Box End -->
 
-        <!-- Contact Map Start -->
-        <section class="mapSection">
-            <div class="google_map" id="google_map"></div>
-        </section>
-        <!-- Contact Map End -->
+<!-- Contact Form Start -->
+<section class="contactSection">
+    <div class="container largeContainer">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="appointment_form">
+                    <p>Your email address will not be published*</p>
+                    <h3>Send Us a Message</h3>
+                    {% if messages %}
+                        <div class="messages">
+                            {% for message in messages %}
+                                <div class="alert alert-success">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    <form action="" method="post" class="row" id="contact_form">
+                        {% csrf_token %}
+                        <div class="input-field col-md-6">
+                            <i class="twi-user2"></i>
+                            {{ form.name }}
+                        </div>
+                        <div class="input-field col-md-6">
+                            <i class="twi-envelope2"></i>
+                            {{ form.email }}
+                        </div>
+                        <div class="input-field icRight col-md-12">
+                            {{ form.subject }}
+                        </div>
+                        <div class="input-field col-md-12">
+                            <i class="twi-pen2"></i>
+                            {{ form.message }}
+                        </div>
+                        <div class="col-md-7 input-field">
+                            <label>
+                                {{ form.subscribe }}
+                                <span class="wpcf7-list-item-label">I Agree to get-e- mails about future conferences.</span>
+                            </label>
+                        </div>
+                        <div class="input-field col-md-12">
+                            <button type="submit" class="qu_btn">Submit Now</button>
+                            <div class="con_message"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="chatNow" style="background-image: url('{% static "images/about/chat.png" %}'); background-size: cover; background-position: center; width: 386px; height: 555px; padding: 20px; border-radius: 10px; color: white;">
+                    <h4>Chat With Support</h4>
+                    <p>Let’s chat with our live experts to get answers to your questions</p>
+                    <a href="javascript:void(0);" class="qu_btn">Live Chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Form End -->
 
+<!-- Contact Map Start -->
+<section class="mapSection">
+    <div class="google_map" id="google_map"></div>
+</section>
+<!-- Contact Map End -->
 
-       
+<!-- Back To Top -->
+<a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
+<!-- Back To Top -->
 
-        <!-- Bact To Top -->
-        <a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
-        <!-- Bact To Top -->
-
-        <!-- Start Include All JS -->
+<!-- Start Include All JS -->
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/jquery.appear.js' %}"></script>
@@ -146,6 +145,4 @@
 <script src="{% static 'js/theme.js' %}"></script>
 <!-- End Include All JS -->
 
-    </body>
-</html>
 {% endblock %}

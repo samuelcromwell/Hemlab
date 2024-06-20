@@ -497,7 +497,7 @@
         map.addMarker({
             lat: -37.815340,
             lng: 144.963230,
-            icon: "assets/images/marker.png",
+            icon: "static/images/marker.png",
             animation: google.maps.Animation.DROP,
             title: 'WH. Center',
             infoWindow: {

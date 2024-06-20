@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-md-6 d-flex">
                     <p><i class="twi-clock2"></i>Mon - Sat: 8:00 am - 7:00 pm</p>
-                    <a class="lang" href="javascript:void(0);"><i class="twi-globe2"></i>English</a>
+                    {% comment %} <a class="lang" href="javascript:void(0);"><i class="twi-globe2"></i>English</a> {% endcomment %}
                 </div>
                 <div class="col-md-6 d-flex align-right justify-content-end">
                     <p><a target="_blank" href="https://www.google.com/maps/@23.608602,90.350998,7z"><i class="twi-location-arrow"></i>Get Directions</a></p>
@@ -76,7 +76,7 @@
                     <div class="navbar01">
                         <div class="navleft">
                             <div class="logo">
-                            <a href="{% url 'home' %}"><img src="{% static 'images/hemlab_logo.png' %}" alt="Digital"></a>
+                                <a href="{% url 'home' %}"><img src="{% static 'images/hemlab_logo.png' %}" alt="Digital"></a>
                             </div>
                             <div class="icon_box_04">
                                 <div class="ib_box"><i class="twi-comments-alt-dollar"></i></div>
@@ -86,7 +86,7 @@
                             <div class="searchBtn">
                                 <a href="javascript:void(0);"><i class="twi-search2"></i></a>
                                 <div class="header01SearchBar">
-                                    <form class="d-flex" method="post" action="#">
+                                    <form class="d-flex" method="post" action="javascript:void(0);">
                                         <input type="search" name="s" placeholder="Search Here...">
                                         <button type="submit"><i class="twi-search2"></i></button>
                                     </form>
@@ -95,24 +95,23 @@
                         </div>
                         <nav class="mainMenu">
                             <ul>
-                                <li class="current-menu-item">
-                                    <a href="{% url 'home' %}">Home</a>  
+                                <li class="{% if request.resolver_match.url_name == 'home' %}current-menu-item{% endif %}">
+                                    <a href="{% url 'home' %}">Home</a>
                                 </li>
-                                <li class="menu-item">
+                                <li class="{% if request.resolver_match.url_name == 'about' %}current-menu-item{% endif %}">
                                     <a href="{% url 'about' %}">About</a>
                                 </li>
-                                <li class="menu-item">
+                                <li class="{% if request.resolver_match.url_name == 'blog' %}current-menu-item{% endif %}">
                                     <a href="{% url 'blog' %}">Blogs</a>
-                                </li>     
-                                <li class="menu-item">
+                                </li>
+                                <li class="{% if request.resolver_match.url_name == 'services' %}current-menu-item{% endif %}">
                                     <a href="{% url 'services' %}">Services</a>
                                 </li>
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="accessNav">
                             <a href="javascript:void(0);" class="menuToggler"><i class="twi-bars1"></i></a>
-                            <a href="contact.html" class="qu_btn">Contact Us</a>
+                            <a href="{% url 'contact' %}" class="qu_btn">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -120,6 +119,8 @@
         </div>
     </header>
     <!-- Header End -->
+
+
 
         <!-- Begin:: Popup Menu -->
         <section class="sidebarMenu">
@@ -134,18 +135,18 @@
                 <div class="SMABody">
                     <ul>
                         <li class="menu-item">
-                            <a href="index.html">Home</a>
+                            <a href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="menu-item current-menu-item">
-                            <a href="about1.html">About</a>
+                            <a href="{% url 'about' %}">About</a>
                         </li>
                         <li class="menu-item">
-                            <a href="blog2.html">Blogs</a>
+                            <a href="{% url 'blog' %}">Blogs</a>
                         </li>     
                         <li class="menu-item">
-                            <a href="service1.html">Services</a>
+                            <a href="{% url 'services' %}">Services</a>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
             </div>

@@ -8,7 +8,7 @@
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="SubsrcribeForm">
-                            <form class="yikes-easy-mc-form" action="#" method="post">
+                            <form class="yikes-easy-mc-form" action="javascript:void(0);" method="post">
                                 <input type="email" name="EMAIL" placeholder="Email Address">
                                 <button class="yikes-easy-mc-submit-button" type="submit">Subsrcribe</button>
                             </form>
@@ -24,7 +24,7 @@
                             <h5>Do you have questions? Call or visit us.</h5>
                             <div class="phone"><i class="twi-phone"></i>+254 2316 2156</div>
                             <p>2659 Moi Avenue, Nairobi, NY 25630, Kenya</p>
-                            <a href="mailto:contact@example.com">info@hemlab.com</a>
+                            <a href="hemlab@gmail.com">info@hemlab.com</a>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4">
@@ -32,7 +32,7 @@
                             <h3 class="widget_title">Useful Links</h3>
                             <ul class="menu">
                                 <li><a href="javascript:void(0);">Our Company</a></li>
-                                <li><a href="javascript:void(0);">About Us</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
                                 <li><a href="javascript:void(0);">Latest News</a></li>
                                 <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                 <li><a href="javascript:void(0);">Privacy Policy</a></li>
@@ -45,12 +45,12 @@
                             <div class="pp_post_item">
                                 <img src="{% static 'images/blog/t1.jpg' %}" alt="">
                                 <span><i class="twi-clock2"></i>10 June, 2021</span>
-                                <a href="single-blog.html">Losing never felt so good energy everything</a>
+                                <a href="{% url 'singleblog' %}">Losing never felt so good energy everything</a>
                             </div>
                             <div class="pp_post_item">
                                 <img src="{% static 'images/blog/t2.jpg' %}" alt="">
                                 <span><i class="twi-clock2"></i>10 June, 2021</span>
-                                <a href="single-blog.html">Losing never felt so good energy everything</a>
+                                <a href="{% url 'singleblog' %}">Losing never felt so good energy everything</a>
                             </div>
                         </div>
                     </div> -->
@@ -58,12 +58,12 @@
                         <div class="widget gallery">
                             <h3 class="widget_title mb28">Post Gallery</h3>
                             <div class="galleryShots">
-                                <a class="popup_img" href="assets/images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g1.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="assets/images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g2.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="assets/images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g3.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="assets/images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g4.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="assets/images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g5.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="assets/images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g6.jpg' %}" alt=""></a>
+                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g1.jpg' %}" alt=""></a>
+                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g2.jpg' %}" alt=""></a>
+                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g3.jpg' %}" alt=""></a>
+                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g4.jpg' %}" alt=""></a>
+                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g5.jpg' %}" alt=""></a>
+                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g6.jpg' %}" alt=""></a>
                             </div>
                         </div>
                     </div> -->
@@ -85,7 +85,7 @@
                                 <li><a href="javascript:void(0);">Privacy</a></li>
                                 <li><a href="javascript:void(0);">Terms</a></li>
                                 <li><a href="{% url 'contact' %}">Contact</a></li>
-                                <li><a href="javascript:void(0);">About</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
                             </ul>
                         </div>
                     </div>

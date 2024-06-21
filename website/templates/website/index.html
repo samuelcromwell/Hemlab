@@ -597,6 +597,47 @@
         </section>
         <!-- Word Process End -->
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#contact_form').on('submit', function(e) {
+                e.preventDefault();
+
+                $.ajaxSetup({
+                    headers: { "X-CSRFToken": '{{ csrf_token }}' }
+                });
+
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "appointment" %}',
+                    data: {
+                        name: $('input[name="con_name"]').val(),
+                        email: $('input[name="con_email"]').val(),
+                        location: $('input[name="con_location"]').val(),
+                        subject: $('select[name="con_subject"]').val(),
+                        message: $('textarea[name="con_message"]').val(),
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        $('.con_message').html('<p style="color: green;">Thank you for booking an appointment! Our team will get back to you shortly with the details of your appointment. Thanks</p>');
+                        $('#contact_form')[0].reset();
+                    },
+                    error: function(xhr, errmsg, err) {
+                        let errors = JSON.parse(xhr.responseText).errors;
+                        let errorMessages = '<ul style="color: red;">';
+                        for (let field in errors) {
+                            errors[field].forEach(function(error) {
+                                errorMessages += '<li>' + error.message + '</li>';
+                            });
+                        }
+                        errorMessages += '</ul>';
+                        $('.con_message').html(errorMessages);
+                    }
+                });
+            });
+        });
+        </script>
+
         <!-- Appoinment Start -->
         <section class="appoinmentSection01">
             <div class="funfactArea">
@@ -619,37 +660,38 @@
                         <div class="appointment_form">
                             <p>Do it right now!</p>
                             <h3>Make an Appointment</h3>
-                            <form action="javascript:void(0);" method="post" class="row" id="contact_form">
-                                <div class="input-field col-md-6">
-                                    <i class="twi-user2"></i>
-                                    <input class="required" type="text" name="con_name" placeholder="Your Name">
-                                </div>
-                                <div class="input-field col-md-6">
-                                    <i class="twi-envelope2"></i>
-                                    <input class="required" type="email" name="con_email" placeholder="Email Address">
-                                </div>
-                                <div class="input-field col-md-6">
-                                    <i class="twi-map-marker-alt2"></i>
-                                    <input type="text" name="con_location" placeholder="Your Location">
-                                </div>
-                                <div class="input-field col-md-6">
-                                    <select class="required" name="con_subject">
-                                        <option selected="selected">Subjects</option>
-                                        <option>Finance Consultant</option>
-                                        <option>Business Consultant</option>
-                                        <option>Financial Advice</option>
-                                        <option>Business Growth</option>
-                                    </select>
-                                </div>
-                                <div class="input-field col-md-12">
-                                    <i class="twi-comment-lines2"></i>
-                                    <textarea class="required" name="con_message" placeholder="Describe Your Plan"></textarea>
-                                </div>
-                                <div class="input-field col-md-12">
-                                    <button type="submit" class="qu_btn">Get A Quote</button>
-                                    <div class="con_message"></div>
-                                </div>
-                            </form>
+                             <form action="javascript:void(0);" method="post" class="row" id="contact_form">
+                            {% csrf_token %}
+                            <div class="input-field col-md-6">
+                                <i class="twi-user2"></i>
+                                <input class="required" type="text" name="con_name" placeholder="Your Name">
+                            </div>
+                            <div class="input-field col-md-6">
+                                <i class="twi-envelope2"></i>
+                                <input class="required" type="email" name="con_email" placeholder="Email Address">
+                            </div>
+                            <div class="input-field col-md-6">
+                                <i class="twi-map-marker-alt2"></i>
+                                <input type="text" name="con_location" placeholder="Your Location">
+                            </div>
+                            <div class="input-field col-md-6">
+                                <select class="required" name="con_subject">
+                                    <option selected="selected">Subjects</option>
+                                    <option>Finance Consultant</option>
+                                    <option>Business Consultant</option>
+                                    <option>Financial Advice</option>
+                                    <option>Business Growth</option>
+                                </select>
+                            </div>
+                            <div class="input-field col-md-12">
+                                <i class="twi-comment-lines2"></i>
+                                <textarea class="required" name="con_message" placeholder="Describe Your Plan"></textarea>
+                            </div>
+                            <div class="input-field col-md-12">
+                                <button type="submit" class="qu_btn">Submit</button>
+                                <div class="con_message"></div>
+                            </div>
+                        </form>
                         </div>
                     </div>
                     <div class="col-xl-6 pdAcc">

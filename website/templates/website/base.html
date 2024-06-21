@@ -120,38 +120,39 @@
     </header>
     <!-- Header End -->
 
-
-
-        <!-- Begin:: Popup Menu -->
-        <section class="sidebarMenu">
-            <div class="sidebarMenuOverlay"></div>
-            <div class="SMArea">
-                <div class="SMAHeader">
-                    <h3>
-                        <i class="twi-bars1"></i> Menu
-                    </h3>
-                    <a href="javascript:void(0);" class="SMACloser"><i class="twi-times2"></i></a>
-                </div>
-                <div class="SMABody">
-                    <ul>
-                        <li class="menu-item">
-                            <a href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="menu-item current-menu-item">
-                            <a href="{% url 'about' %}">About</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="{% url 'blog' %}">Blogs</a>
-                        </li>     
-                        <li class="menu-item">
-                            <a href="{% url 'services' %}">Services</a>
-                        </li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                    </ul>
-                </div>
+    <!-- Begin:: Popup Menu -->
+    <section class="sidebarMenu">
+        <div class="sidebarMenuOverlay"></div>
+        <div class="SMArea">
+            <div class="SMAHeader">
+                <h3>
+                    <i class="twi-bars1"></i> Menu
+                </h3>
+                <a href="javascript:void(0);" class="SMACloser"><i class="twi-times2"></i></a>
             </div>
-        </section>
-        <!-- End:: Popup Menu -->
+            <div class="SMABody">
+                <ul>
+                    <li class="menu-item {% if request.resolver_match.url_name == 'home' %}current-menu-item{% endif %}">
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="menu-item {% if request.resolver_match.url_name == 'about' %}current-menu-item{% endif %}">
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="menu-item {% if request.resolver_match.url_name == 'blog' %}current-menu-item{% endif %}">
+                        <a href="{% url 'blog' %}">Blogs</a>
+                    </li>     
+                    <li class="menu-item {% if request.resolver_match.url_name == 'services' %}current-menu-item{% endif %}">
+                        <a href="{% url 'services' %}">Services</a>
+                    </li>
+                    <li class="menu-item {% if request.resolver_match.url_name == 'contact' %}current-menu-item{% endif %}">
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End:: Popup Menu -->
+
    
 
 

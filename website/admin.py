@@ -1,11 +1,13 @@
 # admin.py
 from django.contrib import admin
-from .models import ContactMessage
+from .models import Contact, Email, Appointment
 
-class ContactMessageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'subject', 'subscribe', 'created_at')
-    search_fields = ('name', 'email', 'subject')
-    list_filter = ('subject', 'subscribe', 'created_at')
-    ordering = ('-created_at',)
 
-admin.site.register(ContactMessage, ContactMessageAdmin)
+admin.site.register(Contact)
+
+
+admin.site.register(Email)
+
+
+admin.site.register(Appointment)
+

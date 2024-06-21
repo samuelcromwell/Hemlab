@@ -1,99 +1,106 @@
- {% load static %}
- <!-- Footer Section -->
-        <footer class="footer_01">
-            <div class="container largeContainer">
-                <div class="row">
-                    <div class="col-lg-7 col-md-6">
-                        <h2 class="secTitle">Sign up for latest news and<br> insights from <span>Hemlab.</span></h2>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="SubsrcribeForm">
-                            <form class="yikes-easy-mc-form" action="javascript:void(0);" method="post">
-                                <input type="email" name="EMAIL" placeholder="Email Address">
-                                <button class="yikes-easy-mc-submit-button" type="submit">Subsrcribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12"><div class="fdivider"></div></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="aboutWidget">
-                            <h5>Do you have questions? Call or visit us.</h5>
-                            <div class="phone"><i class="twi-phone"></i>+254 2316 2156</div>
-                            <p>2659 Moi Avenue, Nairobi, NY 25630, Kenya</p>
-                            <a href="hemlab@gmail.com">info@hemlab.com</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-4">
-                        <div class="widget PL28">
-                            <h3 class="widget_title">Useful Links</h3>
-                            <ul class="menu">
-                                <li><a href="javascript:void(0);">Our Company</a></li>
-                                <li><a href="{% url 'about' %}">About Us</a></li>
-                                <li><a href="javascript:void(0);">Latest News</a></li>
-                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                                <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-6 col-lg-4">
-                        <div class="widget PL28">
-                            <h3 class="widget_title mb28">Latest Posts</h3>
-                            <div class="pp_post_item">
-                                <img src="{% static 'images/blog/t1.jpg' %}" alt="">
-                                <span><i class="twi-clock2"></i>10 June, 2021</span>
-                                <a href="{% url 'singleblog' %}">Losing never felt so good energy everything</a>
-                            </div>
-                            <div class="pp_post_item">
-                                <img src="{% static 'images/blog/t2.jpg' %}" alt="">
-                                <span><i class="twi-clock2"></i>10 June, 2021</span>
-                                <a href="{% url 'singleblog' %}">Losing never felt so good energy everything</a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-md-6 col-lg-3">
-                        <div class="widget gallery">
-                            <h3 class="widget_title mb28">Post Gallery</h3>
-                            <div class="galleryShots">
-                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g1.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g2.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g3.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g4.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g5.jpg' %}" alt=""></a>
-                                <a class="popup_img" href="{% static 'images/blog/s1.jpg' %}"><img src="{% static 'images/blog/g6.jpg' %}" alt=""></a>
-                            </div>
-                        </div>
-                    </div> -->
+{% load static %}
+<!-- Footer Section -->
+<footer class="footer_01">
+    <div class="container largeContainer">
+        <div class="row">
+            <div class="col-lg-7 col-md-6">
+                <h2 class="secTitle">Sign up for latest news and<br> insights from <span>Hemlab.</span></h2>
+            </div>
+            <div class="col-lg-5 col-md-6">
+                <div class="SubsrcribeForm">
+                    <form id="emailForm" method="post">
+                        {% csrf_token %}
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <button class="qu_btn" type="submit">Subscribe</button>
+                    </form>
+                    <div id="form-messages" style="margin-top: 10px;"></div>
                 </div>
             </div>
-        </footer>
-        <!-- Footer Section -->
-
-        <!-- Copyright Section -->
-        <section class="fcopyright">
-            <div class="container largeContainer">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>© 2024 Hemlab. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="copyMenu">
-                            <ul>
-                                <li><a href="javascript:void(0);">Privacy</a></li>
-                                <li><a href="javascript:void(0);">Terms</a></li>
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
-                                <li><a href="{% url 'about' %}">About</a></li>
-                            </ul>
-                        </div>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12"><div class="fdivider"></div></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <div class="aboutWidget">
+                    <h5>Do you have questions? Call or visit us.</h5>
+                    <div class="phone"><i class="twi-phone"></i>+254 2316 2156</div>
+                    <p>2659 Moi Avenue, Nairobi, NY 25630, Kenya</p>
+                    <a href="hemlab@gmail.com">info@hemlab.com</a>
                 </div>
             </div>
-        </section>
-        <!-- Copyright Section -->
+            <div class="col-md-12 col-lg-4">
+                <div class="widget PL28">
+                    <h3 class="widget_title">Useful Links</h3>
+                    <ul class="menu">
+                        <li><a href="javascript:void(0);">Our Company</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="javascript:void(0);">Latest News</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li><a href="javascript:void(0);">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section -->
 
-        <!-- Bact To Top -->
-        <a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
-        <!-- Bact To Top -->
+<!-- Copyright Section -->
+<section class="fcopyright">
+    <div class="container largeContainer">
+        <div class="row">
+            <div class="col-md-6">
+                <p>© 2024 Hemlab. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="copyMenu">
+                    <ul>
+                        <li><a href="javascript:void(0);">Privacy</a></li>
+                        <li><a href="javascript:void(0);">Terms</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Copyright Section -->
+
+<!-- Back To Top -->
+<a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
+<!-- Back To Top -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#emailForm').on('submit', function(e) {
+        e.preventDefault();
+
+        $.ajaxSetup({
+            headers: { "X-CSRFToken": '{{ csrf_token }}' }
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '{% url "subscribe" %}',
+            data: {
+                email: $('#email').val(),
+                csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success: function(response) {
+                $('#form-messages').html('<p style="color: green;">Thank you for subscribing to our Newsletter! You will now receive weekly updates from us</p>');
+                $('#emailForm')[0].reset();
+            },
+            error: function(xhr, errmsg, err) {
+                if (xhr.status === 400 && xhr.responseJSON && xhr.responseJSON.message) {
+                    $('#form-messages').html('<p style="color: red;">' + xhr.responseJSON.message + '</p>');
+                } else {
+                    $('#form-messages').html('<p style="color: red;">This email has already been subscribed to our Newsletter </p>');
+                }
+            }
+        });
+    });
+});
+</script>

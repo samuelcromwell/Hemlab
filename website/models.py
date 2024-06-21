@@ -1,7 +1,7 @@
 # models.py
 from django.db import models
 
-class ContactMessage(models.Model):
+class Contact(models.Model):
     SUBJECT_CHOICES = [
         ('finance', 'Finance Consultant'),
         ('business', 'Business Consultant'),
@@ -18,3 +18,22 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    location = models.CharField(max_length=255)
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+
+class Email(models.Model):
+    email = models.EmailField(unique=True)
+    
+    def __str__(self):
+        return self.email

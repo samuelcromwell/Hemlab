@@ -35,7 +35,7 @@
                             <div class="hpAuthor">
                                 <img class="author" src="{% static 'images/about/1.png' %}" alt="">
                                 <p>Need help? Contact Us</p>
-                                <h3>(254)-1251-6677</h3>
+                                <h3>0792-788959</h3>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
         <!-- Word Process End -->
 
         <!-- Team Start -->
-        <section class="teamSection01">
+        {% comment %} <section class="teamSection01">
             <div class="container largeContainer">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -150,7 +150,7 @@
                             <div class="spIcon">
                                 <i class="twi-phone"></i>
                                 {% comment %} <img src="{% static 'images/1.jpg' %}" alt=""> {% endcomment %}
-                            </div>
+                            {% comment %} </div>
                             <p>We are one of the highest graded company in Kenya. For any Kind of help please contact our <span>24/7 hotline call services.</span> we are ready for you</p>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  {% endcomment %}
         <!-- Team End -->
 
         <!-- Why Choose Start -->
@@ -260,6 +260,9 @@
         <a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
         <!-- Bact To Top -->
 
+        <!-- Tailwind CSS CDN (for the thinner fonts) -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        
         <!-- Start Include All JS -->
             <script src="{% static 'js/jquery.js' %}"></script>
             <script src="{% static 'js/bootstrap.min.js' %}"></script>

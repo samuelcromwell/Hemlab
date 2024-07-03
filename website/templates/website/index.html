@@ -683,10 +683,11 @@
                                     <option>Business Growth</option>
                                 </select>
                             </div>
-                            <div class="input-field col-md-12">
+                            <div class="input-field col-md-12 specific-textarea">
                                 <i class="twi-comment-lines2"></i>
                                 <textarea class="required" name="con_message" placeholder="Describe Your Plan"></textarea>
                             </div>
+                        
                             <div class="input-field col-md-12">
                                 <button type="submit" class="qu_btn">Submit</button>
                                 <div class="con_message"></div>
@@ -782,7 +783,12 @@
 
         <!-- Portfolio Start -->
         <section class="portfolioSection01">
-            <div class="folioSlider01 owl-carousel">
+        <div class="col-lg-12 text-center">
+        <br>
+                    {% comment %} <div class="subTitle"><span class="bleft"></span><span class="bright"></span></div> {% endcomment %}
+                    <h2 class="secTitle">Our <span>Products</span></h2>
+                </div>
+            <div class="folioSlider01 owl-carousel">            
                 <div class="folioItem01">
                     <img src="{% static 'images/folio/Ecommerce.jpg' %}" alt="">
                     <div class="folioContent">
@@ -815,7 +821,7 @@
         <!-- Portfolio End -->
 
        <!-- Team Start -->
-    <section class="teamSection01">
+    {% comment %} <section class="teamSection01">
         <div class="container largeContainer">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -890,8 +896,8 @@
                     <div class="support">
                         <div class="spIcon">
                             <i class="twi-phone"></i>
-                            <img src="{% static 'images/1.jpg' %}" alt="">
-                        </div>
+                            {% comment %} <img src="{% static 'images/1.jpg' %}" alt=""> {% endcomment %}
+                        {% comment %} </div>
                         <p>We are one of the highest graded companies in Kenya. For any kind of help, please contact our <span>24/7 hotline call services.</span> We are ready for you.</p>
                     </div>
                 </div>
@@ -899,12 +905,12 @@
                     <div class="icon_box_04">
                         <div class="ib_box"><i class="twi-comments-alt-dollar"></i></div>
                         <p>Have any Questions?</p>
-                        <h3>254723 25 21589</h3>
+                        <h3>0792-788959</h3>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %} 
 <!-- Team End -->
 
 
@@ -985,7 +991,7 @@
                                 </div> -->
                             <!-- </div> -->
                         <!-- </div> -->
-                    </div>
+                    {% comment %} </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -1022,7 +1028,7 @@
                                 <p class="quotation">
                                     Hemlab Consultants has significantly improved our cash flow management. Their receivables management solutions are efficient and have streamlined our invoicing process. We couldn't be happier with the results!                                <div class="ts_author">
                                     <img src="{% static 'images/home1/p3.jpg' %}" alt="">
-                                    <h5>Sowat Ahsan</h5>
+                                    <h5>Sowat Ahsan</h5> {% endcomment %}
                                     <!-- <span>Designer</span> -->
                                 </div>
                             </div>
@@ -1092,8 +1098,22 @@
             </div>
         </section> -->
         <!-- Blog End -->
+        
+        <style>
+            .specific-textarea .required {
+                padding-left: 30px; /* Adjust the padding value as needed */
+                resize: none; /* Disable the resize handle */
+            }
 
+        </style>
+
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
+        <!-- Back To Top -->
        
+<!-- Tailwind CSS CDN (for the thinner fonts) -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 <!-- Start Include All JS -->
 <script src="{% static 'js/jquery.js' %}"></script>

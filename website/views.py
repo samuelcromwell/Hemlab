@@ -38,29 +38,30 @@ def services(request):
 
 def singleblog(request):
     return render(request, "website/single-blog.html")
-        
+
 class SubscribeView(View):
     def post(self, request, *args, **kwargs):
         form = EmailForm(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data['email']
-            if Email.objects.filter(email=email).exists():
-                return JsonResponse({'message': 'You have already subscribed to our newsletter.'}, status=400)
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        data = {
+            'secret': settings.RECAPTCHA_SECRET_KEY,
+            'response': recaptcha_response
+        }
+        r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+        result = r.json()
+
+        if result['success']:
+            if form.is_valid():
+                email = form.cleaned_data['email']
+                if Email.objects.filter(email=email).exists():
+                    return JsonResponse({'status': 'error', 'message': 'You have already subscribed to our newsletter.'}, status=400)
+                else:
+                    form.save()
+                    return JsonResponse({'status': 'success', 'message': 'Thank you for subscribing to our Newsletter! You will now receive weekly updates from us.'})
             else:
-                form.save()
-                return JsonResponse({'message': 'Success'})
+                return JsonResponse({'status': 'error', 'errors': form.errors.as_json()}, status=400)
         else:
-            return JsonResponse({'errors': form.errors.as_json()}, status=400)
-
-
-# class ContactView(View):
-#     def post(self, request, *args, **kwargs):
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return JsonResponse({'message': 'Success'})
-#         else:
-#             return JsonResponse({'errors': form.errors.as_json()}, status=400)
+            return JsonResponse({'status': 'error', 'message': 'Invalid reCAPTCHA. Please try again.'}, status=400)
 
 class ContactView(View):
     def post(self, request, *args, **kwargs):

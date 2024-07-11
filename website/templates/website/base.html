@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
+    <!-- Hemlab template src -->
+    {% comment %} https://themewar.com/html/quera/index2.html {% endcomment %}
+
     <!-- Start Include All CSS -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
@@ -30,6 +33,11 @@
     <!-- Favicon Icon -->
     <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
     <!-- Favicon Icon -->
+
+    <!-- Recaptcha Validation -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {% comment %} <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> {% endcomment %}
+
 </head>
 <body>
         <!-- Preloading -->

@@ -1,5 +1,11 @@
 from django import forms
 from .models import Contact, Email, Appointment
+# from django_recaptcha.fields import ReCaptchaField
+
+class AppointmentForm(forms.ModelForm):
+    class Meta:
+        model = Appointment
+        fields = ['name', 'email', 'location', 'subject', 'message']
 
 class ContactForm(forms.ModelForm):
     class Meta:
@@ -19,7 +25,3 @@ class EmailForm(forms.ModelForm):
         fields = ['email']
 
 
-class AppointmentForm(forms.ModelForm):
-    class Meta:
-        model = Appointment
-        fields = ['name', 'email', 'location', 'subject', 'message']

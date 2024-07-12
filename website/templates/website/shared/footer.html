@@ -11,9 +11,12 @@
                     <form id="emailForm" method="post">
                         {% csrf_token %}
                         <input type="email" name="email" id="email" placeholder="Email Address" required>
-                        <button class="qu_btn" type="submit">Subscribe</button>
+                        <button class="g-recaptcha qu_btn" 
+                                data-sitekey="6LeavgsqAAAAAEm5c6yrGnTh8KHoginxZkd0-_UN" 
+                                data-callback="onSubmit" 
+                                data-action="submit">Subscribe</button>
+                        <div id="form-messages" style="margin-top: 10px;"></div>
                     </form>
-                    <div id="form-messages" style="margin-top: 10px;"></div>
                 </div>
             </div>
         </div>
@@ -52,7 +55,7 @@
     <div class="container largeContainer">
         <div class="row">
             <div class="col-md-6">
-                <p>© 2024 Hemlab. All Rights Reserved.</p>
+                <p>© <script>document.write(new Date().getFullYear())</script> Hemlab. All Rights Reserved.</p>
             </div>
             <div class="col-md-6">
                 <div class="copyMenu">
@@ -72,11 +75,15 @@
 <!-- Back To Top -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
 $(document).ready(function() {
     $('#emailForm').on('submit', function(e) {
         e.preventDefault();
+        grecaptcha.execute();
+    });
 
+    function onSubmit(token) {
         $.ajaxSetup({
             headers: { "X-CSRFToken": '{{ csrf_token }}' }
         });
@@ -86,20 +93,38 @@ $(document).ready(function() {
             url: '{% url "subscribe" %}',
             data: {
                 email: $('#email').val(),
+                'g-recaptcha-response': token,
                 csrfmiddlewaretoken: '{{ csrf_token }}'
             },
             success: function(response) {
-                $('#form-messages').html('<p style="color: green;">Thank you for subscribing to our Newsletter! You will now receive weekly updates from us</p>');
-                $('#emailForm')[0].reset();
+                let formMessages = $('#emailForm').find('#form-messages');
+                if (response.status === 'success') {
+                    formMessages.html('<p style="color: green;">' + response.message + '</p>');
+                    $('#emailForm')[0].reset();
+                    grecaptcha.reset();
+                } else {
+                    formMessages.html('<p style="color: red;">' + response.message + '</p>');
+                }
             },
             error: function(xhr, errmsg, err) {
-                if (xhr.status === 400 && xhr.responseJSON && xhr.responseJSON.message) {
-                    $('#form-messages').html('<p style="color: red;">' + xhr.responseJSON.message + '</p>');
-                } else {
-                    $('#form-messages').html('<p style="color: red;">This email has already been subscribed to our Newsletter </p>');
+                let formMessages = $('#emailForm').find('#form-messages');
+                try {
+                    let errors = JSON.parse(xhr.responseText).errors;
+                    let errorMessages = '<p style="color: red;">Please fill in the form correctly:</p><ul style="color: red;">';
+                    for (let field in errors) {
+                        errors[field].forEach(function(error) {
+                            errorMessages += '<li>' + error + '</li>';
+                        });
+                    }
+                    errorMessages += '</ul>';
+                    formMessages.html(errorMessages);
+                } catch (e) {
+                    formMessages.html('<p style="color: red;">You have already subscribed to our newsletter, or the email format is wrong</p>');
                 }
             }
         });
-    });
+    }
+
+    window.onSubmit = onSubmit;  // Ensure onSubmit function is available globally
 });
 </script>

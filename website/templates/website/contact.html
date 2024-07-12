@@ -61,50 +61,7 @@
         #form-messages p {
             color: green;
         }
-    </style>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#contact_form').on('submit', function(e) {
-            e.preventDefault();
-
-            $.ajaxSetup({
-                headers: { "X-CSRFToken": '{{ csrf_token }}' }
-            });
-
-            $.ajax({
-                type: 'POST',
-                url: '{% url "contact" %}',
-                data: {
-                    name: $('input[name="name"]').val(),
-                    email: $('input[name="email"]').val(),
-                    subject: $('select[name="subject"]').val(),
-                    message: $('textarea[name="message"]').val(),
-                    subscribe: $('input[name="subscribe"]').is(':checked'),
-                    csrfmiddlewaretoken: '{{ csrf_token }}'
-                },
-                success: function(response) {
-                    $('#form-messages').html('<p>Thank you! Your message has been recorded! We will get back to you soon.</p>');
-                    $('#contact_form')[0].reset();
-                },
-                error: function(xhr, errmsg, err) {
-                    let errors = JSON.parse(xhr.responseText).errors;
-                    let errorMessages = '<ul>';
-                    for (let field in errors) {
-                        errors[field].forEach(function(error) {
-                            errorMessages += '<li>' + error.message + '</li>';
-                        });
-                    }
-                    errorMessages += '</ul>';
-                    $('#form-messages').html(errorMessages);
-                }
-            });
-        });
-    });
-    </script>
-
-        <style>
+    
         .chatNow {
             background-image: url('{% static "images/about/chat.png" %}');
             background-size: cover;
@@ -135,54 +92,71 @@
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-    $(document).ready(function() {
-        $('#contact_form').on('submit', function(e) {
-            e.preventDefault();
-
-            $.ajaxSetup({
-                headers: { "X-CSRFToken": '{{ csrf_token }}' }
+        $(document).ready(function() {
+            $('#contact_form').on('submit', function(e) {
+                e.preventDefault();
+                grecaptcha.execute();
             });
 
-            $.ajax({
-                type: 'POST',
-                url: '{% url "contact" %}',
-                data: {
-                    name: $('input[name="name"]').val(),
-                    email: $('input[name="email"]').val(),
-                    subject: $('select[name="subject"]').val(),
-                    message: $('textarea[name="message"]').val(),
-                    subscribe: $('input[name="subscribe"]').is(':checked'),
-                    csrfmiddlewaretoken: '{{ csrf_token }}'
-                },
-                success: function(response) {
-                    $('#form-messages').html('<p style="color: green;">Thank you for your message! We will get back to you soon.</p>');
-                    $('#contact_form')[0].reset();
-                },
-                error: function(xhr, errmsg, err) {
-                    let errors = JSON.parse(xhr.responseText).errors;
-                    let errorMessages = '<ul style="color: red;">';
-                    for (let field in errors) {
-                        errors[field].forEach(function(error) {
-                            errorMessages += '<li>' + error.message + '</li>';
-                        });
+            function onSubmit(token) {
+                $.ajaxSetup({
+                    headers: { "X-CSRFToken": '{{ csrf_token }}' }
+                });
+
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "contact" %}',
+                    data: {
+                        name: $('input[name="name"]').val(),
+                        email: $('input[name="email"]').val(),
+                        subject: $('select[name="subject"]').val(),
+                        message: $('textarea[name="message"]').val(),
+                        subscribe: $('input[name="subscribe"]').is(':checked'),
+                        'g-recaptcha-response': token,
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            $('#form-messages').html('<p style="color: green;">Thank you for your message! We will get back to you soon.</p>');
+                            $('#contact_form')[0].reset();
+                            grecaptcha.reset();
+                        } else {
+                            $('#form-messages').html('<p style="color: red;">An error occurred. Please try again.</p>');
+                        }
+                    },
+                    error: function(xhr, errmsg, err) {
+                        try {
+                            let errors = JSON.parse(xhr.responseText).errors;
+                            let errorMessages = '<p style="color: red;">Please fill in the form correctly:</p><ul style="color: red;">';
+                            for (let field in errors) {
+                                errors[field].forEach(function(error) {
+                                    errorMessages += '<li>' + error + '</li>';
+                                });
+                            }
+                            errorMessages += '</ul>';
+                            $('#form-messages').html(errorMessages);
+                        } catch (e) {
+                            $('#form-messages').html('<p style="color: red;">An error occurred. Please try filling in the form again.</p>');
+                        }
                     }
-                    errorMessages += '</ul>';
-                    $('#form-messages').html(errorMessages);
-                }
-            });
-        });
-    });
+                });
+            }
 
-    function toggleChat() {
-        var chat = document.getElementById('chatbot');
-        if (chat.style.display === 'none') {
-            chat.style.display = 'block';
-        } else {
-            chat.style.display = 'none';
+            window.onSubmit = onSubmit; // Make onSubmit function available globally
+        });
+
+        function toggleChat() {
+            var chat = document.getElementById('chatbot');
+            if (chat.style.display === 'none') {
+                chat.style.display = 'block';
+            } else {
+                chat.style.display = 'none';
+            }
         }
-    }
     </script>
+    
 </head>
 <body>
     <!-- Contact Form Start -->
@@ -191,7 +165,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="appointment_form">
-                        <p>Your email address will not be published*</p>
+                        {% comment %} <p>Your email address will not be published*</p> {% endcomment %}
                         <h3>Send Us a Message</h3>
                         <form action="{% url 'contact' %}" method="post" class="row" id="contact_form">
                             {% csrf_token %}
@@ -223,7 +197,11 @@
                                 </label>
                             </div>
                             <div class="input-field col-md-12">
-                                <button type="submit" class="qu_btn">Submit Now</button>
+                                <!-- Invisible reCAPTCHA button -->
+                                <button class="g-recaptcha qu_btn" 
+                                        data-sitekey="6LeavgsqAAAAAEm5c6yrGnTh8KHoginxZkd0-_UN" 
+                                        data-callback="onSubmit" 
+                                        data-action="submit">Submit Now</button>
                             </div>
                         </form>
                         <div id="form-messages" class="col-md-12 mt-3"></div>
@@ -249,6 +227,7 @@
         </div>
     </section>
     <!-- Contact Form End -->
+
 
 <!-- Contact Map Start -->
 <section class="mapSection flex justify-center py-8">

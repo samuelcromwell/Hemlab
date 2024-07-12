@@ -33,6 +33,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 INSTALLED_APPS = [
     'jazzmin',
+    'django_recaptcha',
+    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +135,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = '/'
+
+# Optionally, you can silence the system check warning in a development environment
+SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
+
+CSRF_COOKIE_SECURE = False  # Set to True in production with HTTPS
+
+RECAPTCHA_PUBLIC_KEY = '6LeavgsqAAAAAEm5c6yrGnTh8KHoginxZkd0-_UN'
+RECAPTCHA_SECRET_KEY = '6LeavgsqAAAAAAgyMutCg5jo3XFsf4ySjJ7T9O95'

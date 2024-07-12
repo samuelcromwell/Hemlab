@@ -598,84 +598,100 @@
         <!-- Word Process End -->
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script>
-        $(document).ready(function() {
-            $('#contact_form').on('submit', function(e) {
-                e.preventDefault();
-
-                $.ajaxSetup({
-                    headers: { "X-CSRFToken": '{{ csrf_token }}' }
+            $(document).ready(function() {
+                $('#appointment_form').on('submit', function(e) {
+                    e.preventDefault();
+                    grecaptcha.execute();
                 });
 
-                $.ajax({
-                    type: 'POST',
-                    url: '{% url "appointment" %}',
-                    data: {
-                        name: $('input[name="con_name"]').val(),
-                        email: $('input[name="con_email"]').val(),
-                        location: $('input[name="con_location"]').val(),
-                        subject: $('select[name="con_subject"]').val(),
-                        message: $('textarea[name="con_message"]').val(),
-                        csrfmiddlewaretoken: '{{ csrf_token }}'
-                    },
-                    success: function(response) {
-                        $('.con_message').html('<p style="color: green;">Thank you for booking an appointment! Our team will get back to you shortly with the details of your appointment. Thanks</p>');
-                        $('#contact_form')[0].reset();
-                    },
-                    error: function(xhr, errmsg, err) {
-                        let errors = JSON.parse(xhr.responseText).errors;
-                        let errorMessages = '<ul style="color: red;">';
-                        for (let field in errors) {
-                            errors[field].forEach(function(error) {
-                                errorMessages += '<li>' + error.message + '</li>';
-                            });
+                function onSubmit(token) {
+                    $.ajaxSetup({
+                        headers: { "X-CSRFToken": '{{ csrf_token }}' }
+                    });
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '{% url "appointment" %}',  // Ensure this is the correct URL for your view
+                        data: {
+                            name: $('input[name="name"]').val(),
+                            email: $('input[name="email"]').val(),
+                            location: $('input[name="location"]').val(),
+                            subject: $('select[name="subject"]').val(),
+                            message: $('textarea[name="message"]').val(),
+                            'g-recaptcha-response': token,
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                        },
+                        success: function(response) {
+                            if (response.message === 'Success') {
+                                $('#form_messages').html('<p style="color: green;">Thank you for booking an appointment! Our team will get back to you shortly with the details of your appointment. Thanks</p>');
+                                $('#appointment_form')[0].reset();
+                                grecaptcha.reset();
+                            } else {
+                                $('#form_messages').html('<p style="color: red;">' + response.message + '</p>');
+                            }
+                        },
+                        error: function(xhr, errmsg, err) {
+                            try {
+                                let errors = JSON.parse(xhr.responseText).errors;
+                                let errorMessages = '<p style="color: red;">Please fill in the form correctly:</p><ul style="color: red;">';
+                                for (let field in errors) {
+                                    errors[field].forEach(function(error) {
+                                        errorMessages += '<li>' + error + '</li>';
+                                    });
+                                }
+                                errorMessages += '</ul>';
+                                $('#form_messages').html(errorMessages);
+                            } catch (e) {
+                                $('#form_messages').html('<p style="color: red;">An error occurred. Please try filling in the form again.</p>');
+                            }
                         }
-                        errorMessages += '</ul>';
-                        $('.con_message').html(errorMessages);
-                    }
-                });
+                    });
+                }
+
+                window.onSubmit = onSubmit;  // Ensure onSubmit function is available globally
             });
-        });
         </script>
 
         <!-- Appoinment Start -->
         <section class="appoinmentSection01">
-            <div class="funfactArea">
-                <div class="fact_01">
-                    <h2><span class="counter" data-count="2500">2.5</span><i>k</i></h2>
-                    <p>Businesses Served with<br>Expert Financial Solutions</p>
-                </div>
-                <div class="fact_01">
-                    <h2><span class="counter" data-count="138">138</span><i>+</i></h2>
-                    <p>Experienced Professionals Dedicated<br>to Your Success</p>
-                </div>
-                <div class="fact_01">
-                    <h2><span class="counter" data-count="98000">98</span><i>%</i></h2>
-                    <p>Client Satisfaction Rate Achieved<br> Through Our Services</p>
-                </div>
+        <div class="funfactArea">
+            <div class="fact_01">
+                <h2><span class="counter" data-count="2500">2.5</span><i>k</i></h2>
+                <p>Businesses Served with<br>Expert Financial Solutions</p>
             </div>
-            <div class="container largeContainer">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="appointment_form">
-                            <p>Do it right now!</p>
-                            <h3>Make an Appointment</h3>
-                             <form action="javascript:void(0);" method="post" class="row" id="contact_form">
+            <div class="fact_01">
+                <h2><span class="counter" data-count="138">138</span><i>+</i></h2>
+                <p>Experienced Professionals Dedicated<br>to Your Success</p>
+            </div>
+            <div class="fact_01">
+                <h2><span class="counter" data-count="98000">98</span><i>%</i></h2>
+                <p>Client Satisfaction Rate Achieved<br> Through Our Services</p>
+            </div>
+        </div>
+        <div class="container largeContainer">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="appointment_form">
+                        <p>Do it right now!</p>
+                        <h3>Make an Appointment</h3>
+                        <form action="javascript:void(0);" method="post" class="row" id="appointment_form">
                             {% csrf_token %}
                             <div class="input-field col-md-6">
                                 <i class="twi-user2"></i>
-                                <input class="required" type="text" name="con_name" placeholder="Your Name">
+                                <input class="required" type="text" name="name" placeholder="Your Name">
                             </div>
                             <div class="input-field col-md-6">
                                 <i class="twi-envelope2"></i>
-                                <input class="required" type="email" name="con_email" placeholder="Email Address">
+                                <input class="required" type="email" name="email" placeholder="Email Address">
                             </div>
                             <div class="input-field col-md-6">
                                 <i class="twi-map-marker-alt2"></i>
-                                <input type="text" name="con_location" placeholder="Your Location">
+                                <input type="text" name="location" placeholder="Your Location">
                             </div>
                             <div class="input-field col-md-6">
-                                <select class="required" name="con_subject">
+                                <select class="required" name="subject">
                                     <option selected="selected">Subjects</option>
                                     <option>Finance Consultant</option>
                                     <option>Business Consultant</option>
@@ -685,15 +701,20 @@
                             </div>
                             <div class="input-field col-md-12 specific-textarea">
                                 <i class="twi-comment-lines2"></i>
-                                <textarea class="required" name="con_message" placeholder="Describe Your Plan"></textarea>
+                                <textarea class="required" name="message" placeholder="Describe Your Plan"></textarea>
                             </div>
-                        
+                            <br>
+                            <br>
                             <div class="input-field col-md-12">
-                                <button type="submit" class="qu_btn">Submit</button>
-                                <div class="con_message"></div>
+                            <!-- Invisible recaptcha button -->
+                                <button class="g-recaptcha qu_btn" 
+                                        data-sitekey="6LeavgsqAAAAAEm5c6yrGnTh8KHoginxZkd0-_UN" 
+                                        data-callback="onSubmit" 
+                                        data-action="submit">Submit</button>
                             </div>
                         </form>
-                        </div>
+                        <div id="form_messages" class="col-md-12 mt-3"></div>
+                    </div>
                     </div>
                     <div class="col-xl-6 pdAcc">
                         <div class="subTitle"><span class="bleft"></span>Why Choose Us</div>

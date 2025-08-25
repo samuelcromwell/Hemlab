@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-p*j=n(04s!1aa=$0y-hlq@)u)at6cfl83%4&$rgkw@y9ww%2i0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -76,13 +76,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Hemlab.wsgi.application'
 
-
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'website/static'),
-]
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -129,6 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'  # <-- ensure leading slash; avoids broken URLs in production
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'website/static'),
+]
+
 
 # WhiteNoise storage for gzip/brotli + hashed filenames
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
